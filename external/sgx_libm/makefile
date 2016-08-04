@@ -10,7 +10,7 @@ SRC_FILES := $(wildcard $(ARCH)/*.S)
 OBJ_FILES := $(SRC_FILES:.S=.o)
 STATIC_LIB:= $(ARCH)/libm.a
 SHARED_LIB:= $(ARCH)/libm.so
-lib : $(STATIC_LIB) $(SHARED_LIB)
+lib : $(STATIC_LIB)
 
 %.o : %.S
 	gcc $(CFLAGS) -c $< -o $@
